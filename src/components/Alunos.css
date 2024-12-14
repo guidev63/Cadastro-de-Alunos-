@@ -1,0 +1,118 @@
+
+.table {
+    margin: 30px auto; 
+    width: 90%; 
+    border-collapse: collapse; 
+    font-family: 'Roboto', Arial, sans-serif; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+    overflow: hidden; 
+    background-color: #ffffff; 
+}
+
+
+.table thead th {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: #ffffff;
+    padding: 12px 15px; 
+    font-weight: bold; 
+    text-align: center; 
+    text-transform: uppercase;
+    border: none; 
+    white-space: nowrap; 
+}
+
+.table tbody td {
+    padding: 12px 15px; 
+    text-align: center; 
+    font-size: 14px; 
+    color: #333333; 
+    border-bottom: 1px solid #dddddd; 
+    vertical-align: middle; 
+}
+
+
+.table tbody tr:hover {
+    background-color: #f2f2f2; 
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.table tbody tr:last-of-type td {
+    border-bottom: none; 
+}
+
+
+button {
+    padding: 8px 15px; 
+    margin: 5px 8px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    white-space: nowrap;
+}
+
+
+button:nth-child(1) {
+    background-color: #ffc107; 
+    color: #ffffff; 
+}
+
+
+button:nth-child(2) {
+    background-color: #dc3545;
+    color: #ffffff; 
+}
+
+
+button:nth-child(1) {
+    margin-right: 20px; 
+}
+
+
+button:hover {
+    opacity: 0.9; 
+    transform: scale(1.05); 
+}
+
+
+@media (max-width: 768px) {
+    .table {
+        width: 100%; 
+    }
+
+    .table thead {
+        display: none; 
+    }
+
+    .table tbody td {
+        display: block; 
+        text-align: right; 
+        padding: 10px; 
+        font-size: 13px; 
+    }
+
+    .table tbody td::before {
+        content: attr(data-label); 
+        float: left; 
+        text-transform: uppercase; 
+        font-weight: bold; 
+        color: #666666; 
+    }
+
+    .table tbody tr {
+        margin-bottom: 15px; 
+        border: 1px solid #dddddd;
+        border-radius: 8px; 
+        padding: 10px; 
+    }
+
+  
+    button {
+        width: 100%; 
+        margin: 8px 0; 
+    }
+}

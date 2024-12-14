@@ -1,11 +1,11 @@
 import React from "react";
 import Table from 'react-bootstrap/Table';
-import './Alunos.css'; // Importando o CSS
+import './Alunos.css'; 
 
 class Alunos extends React.Component {
     constructor(props) {
         super(props);
-        // Inicializamos o estado com os dados dos alunos
+       
         this.state = {
             alunos: [
                 { id: 1, nome: "João Silva", email: "joao.silva@email.com" },
@@ -20,17 +20,17 @@ class Alunos extends React.Component {
     }
 
     componentWillUnmount() {
-        alert("O componente Alunos foi desmontado!");
+        alert("O componente Alunos foi desmontado!!");
     }
 
     buscarAluno = () => {
-        fetch("https://localhost:5001/api/alunos") // Chamando fetch corretamente
-            .then(resposta => resposta.json()) // Processando a resposta JSON
+        fetch("https://localhost:5001/api/alunos") 
+            .then(resposta => resposta.json()) 
             .then(dados => {
-                this.setState({ alunos: dados }); // Atualizando o estado corretamente
+                this.setState({ alunos: dados }); 
             })
             .catch(erro => {
-                console.error("Erro ao buscar os alunos:", erro); // Tratamento de erros
+                console.error("Erro ao buscar os alunos!!:", erro); 
             });
     }
 
@@ -48,7 +48,7 @@ class Alunos extends React.Component {
             <Table striped bordered hover className="table">
                 <thead>
                     <tr>
-                        <th>ID</th> {/* Coluna ID */}
+                        <th>ID</th> {}
                         <th>Nome</th>
                         <th>Email</th>
                         <th>Opções</th>
@@ -56,10 +56,10 @@ class Alunos extends React.Component {
                 </thead>
                 <tbody>
                     {
-                        // Iterando sobre os alunos e exibindo as informações
+                       
                         this.state.alunos.map((aluno) => (
                             <tr key={aluno.id}>
-                                <td>{aluno.id}</td> {/* Exibindo o ID */}
+                                <td>{aluno.id}</td> {}
                                 <td>{aluno.nome}</td>
                                 <td>{aluno.email}</td>
                                 <td>
